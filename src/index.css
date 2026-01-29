@@ -1,96 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 240 100% 4%;
+    --foreground: 210 100% 97%;
+    --card: 216 64% 17%;
+    --card-foreground: 210 100% 97%;
+    --popover: 216 64% 12%;
+    --popover-foreground: 210 100% 97%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 100% 97%;
+    --secondary: 270 67% 47%;
+    --secondary-foreground: 210 100% 97%;
+    --muted: 216 64% 17%;
+    --muted-foreground: 210 40% 70%;
+    --accent: 186 100% 50%;
+    --accent-foreground: 240 100% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 100% 97%;
+    --border: 217 91% 30%;
+    --input: 217 91% 30%;
+    --ring: 186 100% 50%;
+    --radius: 0.75rem;
+    
+    /* Custom Datronix colors */
+    --datronix-dark: 240 100% 4%;
+    --datronix-blue: 212 75% 19%;
+    --datronix-light-blue: 212 68% 29%;
+    --neon-cyan: 186 100% 50%;
+    --neon-purple: 270 67% 47%;
+    --gold: 51 100% 50%;
+    --gold-light: 54 100% 90%;
+    --gold-dark: 43 74% 49%;
+    
+    --sidebar-background: 240 100% 4%;
+    --sidebar-foreground: 210 100% 97%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 210 100% 97%;
+    --sidebar-accent: 216 64% 17%;
+    --sidebar-accent-foreground: 210 100% 97%;
+    --sidebar-border: 217 91% 30%;
+    --sidebar-ring: 186 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 240 100% 4%;
+    --foreground: 210 100% 97%;
+    --card: 216 64% 17%;
+    --card-foreground: 210 100% 97%;
+    --popover: 216 64% 12%;
+    --popover-foreground: 210 100% 97%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 100% 97%;
+    --secondary: 270 67% 47%;
+    --secondary-foreground: 210 100% 97%;
+    --muted: 216 64% 17%;
+    --muted-foreground: 210 40% 70%;
+    --accent: 186 100% 50%;
+    --accent-foreground: 240 100% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 100% 97%;
+    --border: 217 91% 30%;
+    --input: 217 91% 30%;
+    --ring: 186 100% 50%;
   }
 }
 
@@ -98,8 +74,157 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-jakarta antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-datronix-blue/25 backdrop-blur-xl border border-primary/10;
+  }
+  
+  .glass-panel-solid {
+    @apply bg-datronix-blue/85 backdrop-blur-2xl border border-white/15;
+  }
+  
+  .glass-panel-event {
+    @apply bg-datronix-blue/80 backdrop-blur-lg border border-white/10;
+  }
+  
+  .glass-panel-pass {
+    background: linear-gradient(145deg, hsl(var(--datronix-blue) / 0.85), hsl(270 50% 20% / 0.6));
+    @apply backdrop-blur-2xl border border-gold/30;
+    box-shadow: 0 0 30px hsl(var(--gold) / 0.1);
+  }
+  
+  .anim-text-flow {
+    background: linear-gradient(
+      90deg,
+      hsl(51 100% 50%),
+      hsl(54 100% 90%),
+      hsl(43 74% 49%),
+      hsl(0 0% 100%),
+      hsl(51 100% 50%),
+      hsl(43 74% 49%)
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: color-shift 4s linear infinite;
+    filter: drop-shadow(0 0 15px hsl(51 100% 50% / 0.6)) drop-shadow(0 0 30px hsl(0 0% 100% / 0.2));
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  @keyframes color-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes shine-pulse {
+    0%, 100% {
+      opacity: 0.15;
+      transform: scale(1);
+      filter: drop-shadow(0 0 0px hsl(186 100% 50% / 0));
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 40px hsl(186 100% 50% / 0.6));
+    }
+  }
+  
+  @keyframes slideUpFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes flashBang {
+    0% { opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes rotateRays {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes planetMove {
+    0% { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(110vw) rotate(20deg); }
+  }
+  
+  @keyframes nebulaPulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(1.1); opacity: 0.5; }
+  }
+  
+  @keyframes rotateRing {
+    0% { transform: translate(-50%, -50%) rotateX(75deg) rotateY(0deg) rotateZ(0deg); }
+    100% { transform: translate(-50%, -50%) rotateX(75deg) rotateY(0deg) rotateZ(360deg); }
+  }
+  
+  .animate-shine-pulse {
+    animation: shine-pulse 5s ease-in-out infinite;
+  }
+  
+  .animate-modal-in {
+    animation: modal-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .animate-scroll-left {
+    animation: scroll-left 50s linear infinite;
+  }
+  
+  .animate-rotate-rays {
+    animation: rotateRays 80s linear infinite;
+  }
+  
+  .animate-planet-move {
+    animation: planetMove linear infinite;
+  }
+  
+  .animate-nebula-pulse {
+    animation: nebulaPulse 12s ease-in-out infinite alternate;
+  }
+  
+  .animate-rotate-ring {
+    animation: rotateRing 20s linear infinite;
   }
 }
