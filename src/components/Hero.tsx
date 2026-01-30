@@ -1,3 +1,5 @@
+import datatronixLogo from "../../public/images/bearers/Datatronix.png"
+
 const Hero = () => {
   return (
     <section
@@ -6,11 +8,9 @@ const Hero = () => {
     >
       <div className="text-center z-10">
         {/* Logo Placeholder */}
-        <div className="relative w-40 h-40 sm:w-52 sm:h-52 mx-auto mb-6 sm:mb-8 animate-shine-pulse">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-2xl" />
-          <div className="relative w-full h-full rounded-full border-2 border-primary/50 flex items-center justify-center bg-background/50 backdrop-blur-sm">
-            <span className="text-4xl sm:text-5xl font-bold font-orbitron text-primary">D</span>
-          </div>
+        <div className="relative w-40 h-40 sm:w-52 sm:h-52 mx-auto mb-6 sm:mb-8 e">
+          
+         <img src={datatronixLogo} alt="" />
         </div>
 
         {/* Tagline */}
