@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import EntryAnimation from '@/components/EntryAnimation';
-import Galaxy from '@/components/Galaxy';
-import Background from '@/components/Background';
+
+
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -9,6 +9,7 @@ import Department from '@/components/Department';
 import Events from '@/components/Events';
 import OfficeBearers from '@/components/OfficeBearers';
 import Footer from '@/components/Footer';
+import Galaxy from '@/components/Galaxy1';
 
 const Index = () => {
   const [showEntry, setShowEntry] = useState(true);
@@ -24,22 +25,23 @@ const Index = () => {
       {showEntry && <EntryAnimation onComplete={handleEntryComplete} />}
       
       {showContent && (
-        <div className="min-h-screen">
-          {/* Background Effects */}
-          <Galaxy
-            mouseRepulsion={false}
-            density={1.0}
-            glowIntensity={1.0}
-            saturation={1.0}
-            hueShift={0}
-            twinkleIntensity={0.5}
-            rotationSpeed={0.01}
-            repulsionStrength={0.5}
-            autoCenterRepulsion={0}
-            starSpeed={0}
-            speed={0.5}
-          />
-          <Background />
+        <div className="relative min-h-screen overflow-hidden">
+
+          {/* Galaxy Background */}
+          <div className="fixed inset-0 -z-10">
+            <Galaxy starSpeed={1.5}
+    density={1.7}
+    hueShift={10}
+    speed={1}
+    glowIntensity={0.45}
+    saturation={0}
+    mouseRepulsion
+    repulsionStrength={2}
+    twinkleIntensity={0.5}
+    rotationSpeed={0.05}
+    transparent/>
+          </div>
+          
           
           {/* Content */}
           <Navbar />
