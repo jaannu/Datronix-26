@@ -104,23 +104,32 @@
   }
 
   .anim-text-flow {
-    background: linear-gradient(
-      90deg,
-      hsl(217 70% 55%),
-      hsl(217 80% 65%),
-      hsl(217 90% 75%),
-      hsl(0 0% 100%),
-      hsl(217 70% 55%),
-      hsl(217 80% 65%)
-    );
-    background-size: 300% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: color-shift 4s linear infinite;
-    filter: drop-shadow(0 0 15px hsl(217 70% 55% / 0.6)) drop-shadow(0 0 30px hsl(0 0% 100% / 0.2));
+  background: linear-gradient(
+    90deg,
+   hsl(45 90% 45%),   /* deep gold */
+    hsl(48, 97%, 30%),   /* rich gold */
+    hsl(52 100% 65%),  /* bright yellow */
+    hsl(60, 7%, 91%),  /* soft light yellow */
+    hsl(48 95% 55%),   /* rich gold */
+    hsl(45 90% 45%)  
+  );
+  background-size: 300% 100%;
+  animation: goldFlow 6s linear infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes goldFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
